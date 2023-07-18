@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Movements</title>
+</head>
+<body>
+    <h1>Movements</h1>
+    <form method="POST" action="/movements">
+        <input type="text" name="movement_id" placeholder="Movement ID">
+        <input type="text" name="from_location" placeholder="From Location">
+        <input type="text" name="to_location" placeholder="To Location">
+        <input type="text" name="product_id" placeholder="Product ID">
+        <input type="number" name="qty" placeholder="Quantity">
+        <button type="submit">Add Movement</button>
+    </form>
+    <table>
+        <tr>
+            <th>Movement ID</th>
+            <th>Timestamp</th>
+            <th>From Location</th>
+            <th>To Location</th>
+            <th>Product ID</th>
+            <th>Quantity</th>
+        </tr>
+        {% for movement in movements %}
+        <tr>

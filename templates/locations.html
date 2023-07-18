@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Locations</title>
+</head>
+<body>
+    <h1>Locations</h1>
+    <form method="POST" action="/locations">
+        <input type="text" name="location_id" placeholder="Location ID">
+        <button type="submit">Add Location</button>
+    </form>
+    <table>
+        <tr>
+            <th>Location ID</th>
+        </tr>
+        {% for location in locations %}
+        <tr>
+            <td>{{ location.location_id }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
